@@ -1,0 +1,78 @@
+ ==============================================================================
+ Changelog v1.1.0
+ 
+ General Fixes:
+ - Fixed bug in PCA.py that caused a crash due to inconsistent label lengths
+ - Fixed bug in DT plotting
+ - Fixed some plot labels
+ - Reduced tree size and added accruacy output from trees (subplot 133)
+ - Added a bootstrap function to DecisionTrees.py to calculate the mean
+   and CI in subplot 133
+ - Added welcome splash to both codes
+ - Added optional boostrap to DT code
+ - Added progress bars to DT code
+ - Fixed a bug that caused errors with sets containing more than 99 features (PCA.py)
+ - Added variable called MAX_X to plot_results function of DecisionTree.py, to limit the
+   number of features shown in subplot 121 and 122
+ 
+ Specific Changes:
+ 
+ Changes to PCA.py
+ - resized label arrays in plot_results() to reduce size of f_labels to match f_x
+ - Changed labels in PCA plot to PC 1&2 from PCA 1&2
+ - Fixed an error that started the counting of PC at 0 instead of 1 in subplot 222
+ - Added code version object
+ - Added welcome splash, with code parameters'
+ - removed n_components option to PCA class call to fix but with "too many components"
+   seen when n_features > 99
+ 
+
+ 
+ Changes to DecisionTree.py:
+ - Increased default to 10,000 trees from 1,000
+ - Added lines of code to rotate the xlabels by 90 degress
+ - reduced max depth to 2
+ - Added accuracy calculation (see accuracy function) that calculates Balanced
+   Accruacy
+ - Added array to record BAs from all DecisionTrees
+ - increased output to three plots and added subplot at 133 showing dist of
+   balanced accuracies
+ - Added and implemented a bootstrap function to add CI to subplot 133
+ - Added sys import
+ - Added progressbar function
+ - Added code version object
+ - Added welcome splash, with code parameters
+ - Added options to toggle Boostrapping, and control the number of boot steps:
+   BOOT and BSTEPS
+ - Added variable called MAX_X to plot_results function of DecisionTree.py, to limit the
+   number of features shown in subplot 121 and 122
+ ==============================================================================
+ Changelog v1.0.1
+ 
+ General Fixes:
+ - Fixed inconsistent plot formatting
+ - Made changes to allow the code to be run by double clicking the icon
+   instead of running from the command line
+
+ Specific Changes: 
+ 
+ Changes to PCA.py:
+ - added os import
+ - Added some code to point the python script towards the full path of the
+   input file.
+ - modified import_data function
+ 
+ Changes to DecisionTree.py:
+ - added os import
+ - Added some code to point the python script towards the full path of the
+   input file.
+ - Changed formatting to the bar graphs, to be consistent with the formatting
+   in the PCA.py code.
+ - Slightly changed the wording of the Note to improve the accuracy of the
+   statement.
+ 
+ Changes to README.txt:
+ - Updated the "Running The Codes" section to include a description on running
+   if from the directory.
+ - Added a note about changing the INFILE variable in the code itself
+ ==============================================================================
